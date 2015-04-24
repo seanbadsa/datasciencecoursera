@@ -1,3 +1,4 @@
+########Program: run_analysis.R
 
 ########### Prepare the environment 
 if(!file.exists("./data")){dir.create("./data")}

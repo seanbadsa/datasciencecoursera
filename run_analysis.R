@@ -62,8 +62,4 @@ avg_ds <- aggregate(avg_df,list(combined$SUBJECT, combined$ACTIVITY), mean)
 ##avg_ds 
 ##write.csv(avg_ds, paste("data", trg_dir,  "FinalAverageDS.csv", sep="/"))
 write.table(avg_ds, paste("data", trg_dir,  "TidyFinalAverageDS.txt", sep="/"),row.name=FALSE)
-  
-                     
 
-
-save.image("C:\\C_LocalFiles\\DataScienceJH\\03.GettingAndCleanningData\\Assignment\\Wk3Grade\\Wk3.RData")

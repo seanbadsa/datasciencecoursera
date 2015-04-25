@@ -66,8 +66,13 @@ The following section describes the name of the major variables that used in the
 Output:  
 	The final dataset name is TidyFinalAverageDS.txt, will be available in the user's work 
                directory's "data" folder.
+               
 	: The table is of a 180x68 data frame
+	
 	: The first column contains subject IDs.
+	
 	: The second column contains activity names.
+	
 	: The averages for each of the 66 attributes are in columns 3 to 68.
+	
 

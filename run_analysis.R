@@ -1,12 +1,17 @@
 ########Program: run_analysis.R
 
 ########### Prepare the environment 
+cat("*** Start the Program ** \n")
+Sys.time()
 if(!file.exists("./data")){dir.create("./data")}
 
 Url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 zFile <- "getdata-projectfiles-UCI-HAR-Dataset.zip"
 destZDir <- paste("data", zFile, sep="/")
+cat("*** Downloading the file please wait for few...\n")
 download.file(Url, destZDir , method="auto")
+cat("*** Unzipping the file ..\n")
+
 unzip(destZDir, exdir="data")
 
 trg_dir <- setdiff(dir("data"), zFile )
@@ -63,4 +68,6 @@ avg_ds <- aggregate(avg_df,list(combined$SUBJECT, combined$ACTIVITY), mean)
 ##avg_ds 
 ##write.csv(avg_ds, paste("data", trg_dir,  "FinalAverageDS.csv", sep="/"))
 write.table(avg_ds, paste("data", trg_dir,  "TidyFinalAverageDS.txt", sep="/"),row.name=FALSE)
-
+cat( "** End of process \n\n")
+Sys.time()
+cat("\n")

@@ -70,4 +70,4 @@ avg_ds <- aggregate(avg_df,list(combined$SUBJECT, combined$ACTIVITY), mean)
 write.table(avg_ds, paste("data", trg_dir,  "TidyFinalAverageDS.txt", sep="/"),row.name=FALSE)
 cat( "** End of process \n\n")
 Sys.time()
-cat("\n")
+## end of program
